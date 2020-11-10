@@ -14,25 +14,23 @@ class Trends extends React.Component {
 
   render() {
       return (
-          <div className="trends-container">
+        <div className="trends-container">
+          <h2 className="trends-title">¿Qué está pasando?</h2>
+          <div className="trends">
               {
                   this.state.trends.map( trend => {
                       return (
                         <Trend
                         category={trend.category}
                         title={trend.title}
-                        noTweets={trend.noTweets} />
-                        // <Tweet
-                        // profileUrl={tweet.profileUrl}
-                        // profile={tweet.profile}
-                        // username={tweet.username}
-                        // content={tweet.content}
-                        // iconList={this.state.iconArray}/>
+                        noTweets={
+                          trend.noTweets = trend.noTweets > 1000 ? trend.noTweets/1000 + "mil" : trend.noTweets} />
                       )
                   })
               }
               
           </div>
+        </div>
       );
   }
 }

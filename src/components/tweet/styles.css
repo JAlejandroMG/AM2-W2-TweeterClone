@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;   
     width: 100%;
-    padding: 0em 1em;
+    padding: 1.5em 1em;
     margin: 0 auto;
 }
 
@@ -15,16 +15,6 @@
 .row-interactions {
   display: flex;
   justify-content: space-around;
-}
-
-.a1 {
-  border: 1px solid red;
-}
-.a2 {
-  border: 1px solid green;
-}
-.a3 {
-  border: 1px solid blue;
 }
 
 .c1 {

@@ -13,12 +13,16 @@ class Tweet extends React.Component{
           this.props.retweets
         ]
     }
-}
+  }
+
+  updateInteraction = () => {
+
+  }
 
     render(){
         return (
             <div className="tweet-container">
-                <div className="row a1">
+                <div className="row">
                     <div className="c1">
                         <img src={this.props.profileUrl} alt="profile" />
                     </div>
@@ -28,16 +32,15 @@ class Tweet extends React.Component{
                     </div>
                     <div className="c3"></div>
                 </div>
-                <div className="row a2">
+                <div className="row">
                     <p className="content">                
                         {this.props.content}
                     </p>
                 </div>
-                <div className="row-interactions a3">
+                <div className="row-interactions">
                   {
                       this.props.iconList.map( (icon, index) => {
                           return (
-                            // <Icon source={icon} />
                             <Interaction source={icon} interaction={this.state.interactionsArray[index]} />
                           )
                       })

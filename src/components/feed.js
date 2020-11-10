@@ -7,15 +7,17 @@ import {
   ShareSolid
 } from "@graywolfai/react-heroicons";
 
+import './stylesFeed.css';
+
 class Feed extends React.Component {
     constructor() {
         super();
         this.state = {
             tweets: feed,
             iconArray: [ 
-              <HeartSolid />,
-              <ChatSolid />, 
-              <ShareSolid />
+              <HeartSolid className="interaction-icon" />,
+              <ChatSolid className="interaction-icon" />, 
+              <ShareSolid className="interaction-icon" />
             ]
         }
     }
@@ -31,10 +33,12 @@ class Feed extends React.Component {
                           profile={tweet.profile}
                           username={tweet.username}
                           content={tweet.content}
-                          interactionsList={this.state.interactionsArray}
-                          comments={tweet.interaction.comments}
-                          retweets={tweet.interaction.retweets}
-                          likes={tweet.interaction.likes}
+                          comments={
+                            tweet.interaction.comments = tweet.interaction.comments> 1000 ? tweet.interaction.comments/1000 + "mil" : tweet.interaction.comments}
+                          retweets={
+                            tweet.interaction.retweets = tweet.interaction.retweets> 1000 ? tweet.interaction.retweets/1000 + "mil" : tweet.interaction.retweets}
+                          likes={
+                            tweet.interaction.likes = tweet.interaction.likes> 1000 ? tweet.interaction.likes/1000 + "mil" : tweet.interaction.likes}
                           iconList={this.state.iconArray}/>
                         )
                     })

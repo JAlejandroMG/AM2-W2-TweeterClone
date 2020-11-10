@@ -10,7 +10,7 @@ class Trend extends React.Component{
         return (
             <div className="trend-container">
               <p>{this.props.category}</p>
-              <p>{this.props.title}</p>
+              <p className="trend-content">{this.props.title}</p>
               <p>{this.props.noTweets} Tweets</p>
             </div>
         )
